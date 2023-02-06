@@ -1,0 +1,810 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: EECU EBS TECU GECU Retarder EngineRetarder ExhaustRetarder SWM ACC ACM Vector_XXX IC VECU TGW
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ DPFLampCommand : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DPFPassiveRegenerationStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActiveRegenerationStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFStatus : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DPFActiveRegenInhibitedStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActiveRegInhDueToInhibitSwi : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActiveRegInhDueToClutchDise : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToServiceBrakeA : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActiveRegInhDueToPTOActive : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToAccPedalOffId : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToOutOfNeutral : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueVehSpdAboveAllS : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToParkBrakeNotS : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToLowExhGasTemp : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToSystemFaultAc : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToSystemTimeout : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToTempSystemLock : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToPermSystemLock : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueToEngineNotWarm : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFActRegInhDueVehSpdBelowAllS : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DPFAutomaticActiveRegenInitCon : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ExhaustSystemHighTempLampComma : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DPFActiveRegenerationForcedSta : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2566732861 A1DEFSI_ACM: 8 ACM
+ SG_ AT1DEFMotorSpeed : 0|16@1+ (0.5,0) [0|32127.5] "RPM" Vector__XXX
+
+BO_ 2565874493 A1SCRDSI1_ACM: 8 ACM
+ SG_ AT1DEFDoserPresAbs : 40|8@1+ (8,0) [0|2000] "kPa" Vector__XXX
+
+BO_ 2499624448 A1SCREGT_E: 8 EECU
+ SG_ AT1SCRCatalystIntakeGasTemp : 0|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ AT1SCRCatalystOutletGasTemp : 24|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+
+BO_ 2566734141 A1SCRDSI2_ACM: 8 ACM
+ SG_ AT1Heater1Status : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AT1Heater2Status : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AT1Heater3Status : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AT1Heater4Status : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566774784 AMB2_E: 8 EECU
+ SG_ CalculatedAmbientAirTemp : 32|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+
+BO_ 2566845696 AMBC_E: 8 EECU
+ SG_ BarometricPressure : 0|8@1+ (0.5,0) [0|125] "kPa" Vector__XXX
+ SG_ CabInteriorTemperature : 8|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ AmbientAirTemperature : 24|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ AirInletTemperature : 40|8@1+ (1,-40) [-40|210] "°C" Vector__XXX
+ SG_ RoadSurfaceTemperature : 48|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+
+BO_ 2566753341 AT1GP_ACM: 8 ACM
+ SG_ DPFIntakePressure1 : 0|16@1+ (0.1,0) [0|6425.5] "" Vector__XXX
+ SG_ DPFOutletPressure1 : 16|16@1+ (0.1,0) [0|6425.5] "" Vector__XXX
+
+BO_ 2565869117 AT1IG1_ACM: 8 ACM
+ SG_ AT1IntakeNOx : 0|16@1+ (0.05,-200) [-200|3012.75] "" Vector__XXX
+ SG_ AT1IntakeO2 : 16|16@1+ (0.000514,-12) [-12|21.0271] "" Vector__XXX
+ SG_ AT1IntakeGasSensorPowerInRange : 32|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1IntakeGasSensorAtTemp : 34|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1IntakeNOxReadingStable : 36|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1IntakeWideRangeO2ReadStable : 38|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1IntakeGasSensorHeaterPrelFMI : 40|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ AT1IntakeGasSensorHeaterControl : 45|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1IntakeNOxSensorPrelFMI : 48|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ AT1IntakeOxygenSensorPrelFMI : 56|5@1+ (1,0) [0|31] "" Vector__XXX
+
+BO_ 2565869373 AT1OG1_ACM: 8 ACM
+ SG_ AT1OutletNOx : 0|16@1+ (0.05,-200) [-200|3012.75] "" Vector__XXX
+ SG_ AT1OutletO2 : 16|16@1+ (0.000514,-12) [-12|21.0271] "" Vector__XXX
+ SG_ AT1OutletGasSensorPowerInRange : 32|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1OutletGasSensorAtTemp : 34|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1OutletNOxReadingStable : 36|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1OutletWideRangeO2ReadStable : 38|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1OutletGasSensorHeaterPrelFMI : 40|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ AT1OutletGasSensorHeaterControl : 45|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1OutletNOxSensorPrelFMI : 48|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ AT1OutletOxygenSensorPrelFMI : 56|5@1+ (1,0) [0|31] "" Vector__XXX
+
+BO_ 2566763520 AT1IG2_E: 8 EECU
+ SG_ ExhaustGasTemperature1 : 0|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ ParticulateTrapIntakeGasTemp : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ ExhaustGasTemp1_Prel_FMI : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ PartTrapIntakeGasTemp_Prel_FMI : 40|5@1+ (1,0) [0|31] "" Vector__XXX
+
+BO_ 2566763264 AT1OG2_E: 8 EECU
+ SG_ AT1DPFOutExGasTempPreFMI : 40|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1ExGasTemp3PrelFMI : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ AT1DPFOutletGasTemp : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ AT1ExGasTemp : 0|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+
+BO_ 2566763069 AT1IMG_ACM: 8 ACM
+ SG_ AT1DPFMidGasTemp : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ AT1DPFDiffDeltaPress : 40|16@1+ (0.1,0) [0|6425.5] "kPa" Vector__XXX
+
+BO_ 2566804992 AT1T1I_E: 8 EECU
+ SG_ AT1SCRCatalystTankLevel : 0|8@1+ (0.4,0) [0|100] "" Vector__XXX
+ SG_ AT1SCRCatalystTankTemperature : 8|8@1+ (1,-40) [-40|210] "" Vector__XXX
+ SG_ AT1SCRCatalystTankLevel2 : 16|16@1+ (0.1,0) [0|6425.5] "mm" Vector__XXX
+ SG_ AT1SCRCatalystTankLevelPrelFMI : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ AT1DEFTankLowLevelIndicator : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ AT1SCRCatalReagTank1TempPrelFMI : 40|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ ATSCROperatorInducementSeverity : 45|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AT1SCRCatalystTankHeater : 48|8@1+ (0.4,0) [0|100] "" Vector__XXX
+ SG_ AT1SCRCatalReagTank1HeatPrelFMI : 56|5@1+ (1,0) [0|31] "" Vector__XXX
+
+BO_ 2565668669 BAM_ACM: 8 ACM
+ SG_ CtrlByte : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ NoOfBytes : 8|16@1+ (1,0) [9|1785] "" Vector__XXX
+ SG_ NoOfPackets : 24|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ NotUsed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PGN_ID : 40|24@1+ (1,0) [0|16777200] "" Vector__XXX
+
+BO_ 2565668631 BAM_DID: 8 IC
+ SG_ CtrlByte : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ NoOfBytes : 8|16@1+ (1,0) [9|1785] "" Vector__XXX
+ SG_ NoOfPackets : 24|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ PGN_ID : 40|24@1+ (1,0) [0|16777200] "" Vector__XXX
+ SG_ NotUsed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2565668608 BAM_E: 8 EECU
+ SG_ CtrlByte : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ NoOfBytes : 8|16@1+ (1,0) [9|1785] "" Vector__XXX
+ SG_ NoOfPackets : 24|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ NotUsed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PGN_B1 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PGN_B2 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PGN_B3 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565668623 BAM_ER: 8 EngineRetarder
+ SG_ CtrlByte : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ NoOfBytes : 8|16@1+ (1,0) [9|1785] "" Vector__XXX
+ SG_ NoOfPackets : 24|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ PGN_ID : 40|24@1+ (1,0) [0|16777200] "" Vector__XXX
+ SG_ NotUsed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2565668624 BAM_R: 8 Retarder
+ SG_ CtrlByte : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ NoOfBytes : 8|16@1+ (1,0) [9|1785] "" Vector__XXX
+ SG_ NoOfPackets : 24|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ PGN_ID : 40|24@1+ (1,0) [0|16777200] "" Vector__XXX
+ SG_ NotUsed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2565668685 BAM_SWM: 8 SWM
+ SG_ CtrlByte : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ NoOfBytes : 8|16@1+ (1,0) [9|1785] "" Vector__XXX
+ SG_ NoOfPackets : 24|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ PGN_ID : 40|24@1+ (1,0) [0|16777200] "" Vector__XXX
+ SG_ NotUsed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566844672 CCVS_X_E: 8 EECU
+ SG_ EngineTestModeSW : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IdleDecrSW : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IdleIncrSW : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCState : 53|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCSetSpeed : 40|8@1+ (1,0) [0|250] "km/h" Vector__XXX
+ SG_ CCAccSw : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCResumeSw : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCCoastSw : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCSetSw : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ClutchSw : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BrakeSw : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCEnableSw : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCActive : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VehicleSpeed : 8|16@1+ (0.003906,0) [0|251] "km/h" Vector__XXX
+ SG_ ParkingBrakeSw : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TwoSpeedAxleSw : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PTO_State : 48|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ EngShutDwnOverRdSw : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566757181 CRI1_ACM: 8 ACM
+ SG_ CatalystReagentType : 40|4@1+ (1,0) [0|15] ""  EECU
+ SG_ CatalystReagentTemperature2 : 0|8@1+ (1,-40) [-40|210] "°C"  EECU
+ SG_ CatalystReagentTemp2PrelFMI : 24|5@1+ (1,0) [0|31] ""  EECU
+ SG_ CatalystReagentPropertiesPrelFMI : 32|5@1+ (1,0) [0|31] ""  EECU
+ SG_ CatalystReagentConductivity : 16|8@1+ (5,0) [0|1250] "uS/mm"  EECU
+ SG_ CatalystReagentConcentration : 8|8@1+ (0.25,0) [0|62.5] "%"  EECU
+
+BO_ 2566847511 DD_IC: 8 IC
+ SG_ WasherFluidLevel : 0|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ FuelLevel : 8|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ EngineFuelFilterDiffPressure : 16|8@1+ (2,0) [0|500] "kPa" Vector__XXX
+ SG_ EngineOilFilterDiffPressure : 24|8@1+ (0.5,0) [0|125] "kPa" Vector__XXX
+ SG_ CargoAmbientTemperature : 32|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+
+BO_ 2566834749 DM1_ACM: 8 ACM
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashAmberWarningLampAWL : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashRedStopLampRSL : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashMalfunctionIndicatorLampM : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SPNLeastSignificantByte : 16|8@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ SPNMostSignificantByte : 24|8@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ SPN2LeastSignificantByte : 37|3@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ OccurrenceCount : 40|7@1+ (1,0) [0|126] "" Vector__XXX
+ SG_ SPNConversionMethod : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566834699 DM1_ABS: 8 EBS
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashAmberWarningLampAWL : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashRedStopLampRSL : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashMalfunctionIndicatorLampM : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SPN8LeastSignificantBitsOfSPN : 16|8@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ SPNSecondByteOfSPN : 24|8@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ SPN3MostSignificantBits : 37|3@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ OccurrenceCount : 40|7@1+ (1,0) [0|126] "" Vector__XXX
+ SG_ SPNConversionMethod : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566834711 DM1_DID: 8 IC
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashAmberWarningLampAWL : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashRedStopLampRSL : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashMalfunctionIndicatorLampM : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SPN8LeastSignificantBitsOfSPN : 16|8@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ SPNSecondByteOfSPN : 24|8@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ SPN3MostSignificantBits : 37|3@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ OccurrenceCount : 40|7@1+ (1,0) [0|126] "" Vector__XXX
+ SG_ SPNConversionMethod : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566834688 DM1_E: 8 EECU
+ SG_ ProtectLamp : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AmberWarningLamp : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RedStopLamp : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MalfunctionIndicatorLamp : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashAmberWarningLampAWL : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashRedStopLampRSL : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashMalfunctionIndicatorLampM : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SPNLeastSignificantByte : 16|8@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ SPNMostSignificantByte : 24|8@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ FailureModeIdentifier : 32|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ SPN2LeastSignificantByte : 37|3@1+ (1,0) [0|524287] "" Vector__XXX
+ SG_ OccurrenceCount : 40|7@1+ (1,0) [0|126] "" Vector__XXX
+ SG_ SPNConversionMethod : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566749184 DPFC1_E: 8 EECU
+ SG_ DPFC1_ExhaustSystHighTempLampCmd : 50|3@1+ (1,0) [0|7] ""  IC
+ SG_ DPFC1_InhibPTOActive : 24|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibClutchDisengage : 20|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_AutoARInitConfig : 48|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibSystemFaultAct : 36|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_PassiveRegenStatus : 8|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_ForcedStatus : 53|3@1+ (1,0) [0|7] ""  IC
+ SG_ DPFC1_LampCommand : 0|3@1+ (1,0) [0|7] ""  IC
+ SG_ DPFC1_InhibDueInhibSwitch : 18|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_ActiveRegeneratStatus : 10|2@1+ (1,0) [0|3] ""  IC,TECU
+ SG_ DPFC1_InhibTempSystemLock : 40|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibVehSpdAboveAllwdSpd : 30|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibPermSystemLock : 42|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibOutOfNeutral : 28|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibitStatus : 16|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_DPFStatus : 12|3@1+ (1,0) [0|7] ""  IC
+ SG_ DPFC1_InhibVehSpdBelowAllwdSpd : 46|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibAccPedalOffIdle : 26|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibDueSystemTimeout : 38|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibDueServiceBrake : 22|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibParkBrakeNotSet : 32|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibEnginNotWarmUp : 44|2@1+ (1,0) [0|3] ""  IC
+ SG_ DPFC1_InhibDueLowExhGasTemp : 34|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 2565865777 EBC1_X_G: 8 GECU
+ SG_ ASRHillholderSw : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ASROffroadSw : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ABSOffroadSw : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ABSActive : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ASRBrkCtrlActive : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ASREngCtrlActive : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SourceAddrCtrlDev : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BrakePedalPos : 8|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ EBS_BrakeSW : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TracCtrlOverrideSW : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RemoteAccEnableSW : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AuxEngShutDwnSW : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngDerateSW : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AccInterLockSW : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngRetarderSel : 32|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ ABS_EBS_AmberWrnSt : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EBSRedWrnSt : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ABSFullyOp : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ATC_ASRInformationSignal : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HaltBrakeSwitch : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TrailerABS_Status : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TractorMountedTrailerABSWarning : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2633949952 EC1_E: 8 EECU
+ SG_ EngineSpeedAtIdlePoint1 : 0|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ EnginePercentTorqueAtIdlePoint1 : 16|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ EngineSpeedAtPoint2 : 24|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ EnginePercentTorqueAtPoint2 : 40|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ EngineSpeedAtPoint3 : 48|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ EnginePercentTorqueAtPoint3 : 64|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ EngineSpeedAtPoint4 : 72|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ EnginePercentTorqueAtPoint4 : 88|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ EngineSpeedAtPoint5 : 96|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ EnginePercentTorqueAtPoint5 : 112|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ EngineSpeedAtHighIdlePoint6 : 120|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ EngineGain : 136|16@1+ (0.00078125,0) [0|50.2] "%/rpm" Vector__XXX
+ SG_ EngineReferenceTorque : 152|16@1+ (1,0) [0|64255] "Nm" Vector__XXX
+ SG_ EngMaxMomentaryOverrideSpdPoint7 : 168|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ EngMaxMomentaryOverrideTimeLmt : 184|8@1+ (0.1,0) [0|25] "Seconds" Vector__XXX
+ SG_ EngRqstdSpdCtrlRngLowerLmt : 192|8@1+ (10,0) [0|2500] "rpm" Vector__XXX
+ SG_ EngRqstdSpdCtrlRngUpperLmt : 200|8@1+ (10,0) [0|2500] "rpm" Vector__XXX
+ SG_ EngRqstdTrqCtrlRngLowerLmt : 208|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ EngRqstdTrqCtrlRngUpperLmt : 216|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ EngExRngReqSpdCtrlUpLmt : 224|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ EngineMomentOfInertia : 240|16@1+ (0.004,0) [0|257.02] "kg/mÂ²" Vector__XXX
+ SG_ EngineDefaultTorqueLimit : 256|16@1+ (1,0) [0|64255] "Nm" Vector__XXX
+ SG_ SupportVariableRateTSC1Message : 272|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SupportTSC1ControlPurposeGroup1 : 280|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SupportTSC1ControlPurposeGroup2 : 288|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SupportTSC1ControlPurposeGroup3 : 296|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SupportTSC1ControlPurposeGroup4 : 304|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2364539904 EEC1_E: 8 EECU
+ SG_ EngineTorqueMode : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ DrDemEngPercTorq : 8|8@1+ (1,-125) [0|125] "perc" Vector__XXX
+ SG_ ActEngPercTorque : 16|8@1+ (1,-125) [0|125] "perc" Vector__XXX
+ SG_ EngineSpeed : 24|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ SourceAddrCtrlDev : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EngineStarterMode : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ EngineDemand : 56|8@1+ (1,-125) [-125|125] "perc" Vector__XXX
+
+BO_ 2364539648 EEC2_E: 8 EECU
+ SG_ ActMaxAvailableEngPercentTrq : 48|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ VehAccelerationRateLmtStat : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AccelPedPos2 : 32|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ RemoteAccelPedPos : 24|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ PercLoadCurrSpeed : 16|8@1+ (1,0) [0|125] "perc" Vector__XXX
+ SG_ AccelPedPos1 : 8|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ AccelPed2LowIdleSw : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RoadSpdLmtSt : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ApKickDownSw : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ApLowIdleSw : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566840064 EEC3_X_E: 8 EECU
+ SG_ EstEngParasiticLosses : 32|8@1+ (1,-125) [0|125] "" Vector__XXX
+ SG_ EngOpSpeedAsymAdj : 24|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ EngDesOperSpeed : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ NomFricPercTorque : 0|8@1+ (1,-125) [0|125] "perc" Vector__XXX
+
+BO_ 2566844160 EFLP1_E: 8 EECU
+ SG_ EngineFuelDeliveryPressure : 0|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ EngineCrankcaseBlowbyPressure : 8|8@1+ (0.05,0) [0|12.5] "kPa" Vector__XXX
+ SG_ EngineOilLevel : 16|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ EngineOilPressure : 24|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ EngineCrankcasePressure : 32|16@1+ (0.0078125,-250) [-250|251.99] "kPa" Vector__XXX
+ SG_ EngineCoolantPressure : 48|8@1+ (2,0) [0|500] "kPa" Vector__XXX
+ SG_ EngineCoolantLevel : 56|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+
+BO_ 2566841600 EHRR_X_E: 8 EECU
+ SG_ TotalEngineHours : 0|32@1+ (0.05,0) [0|210554000] "h" Vector__XXX
+ SG_ TotalEngineRevolutions : 32|32@1+ (1000,0) [0|2013260000] "" Vector__XXX
+
+BO_ 2565865487 ERC1_ER: 8 EngineRetarder
+ SG_ RetarderTorqueMode : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ RetEnblBrkAssSw : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RetEnblShiftAssSw : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ActRetPercTorque : 8|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ IntRetPerTorque : 16|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ EngCoolantLoadIncr : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RetarderRequestingBrakeLight : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SrcAddCtrlDevRetCtrl : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DriversDemandRetarder : 40|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ RetarderSelection_non_engine : 48|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ ActMaxAvailRetTorque : 56|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+
+BO_ 2566843904 ET1_X_E: 8 EECU
+ SG_ EngineCoolantTemp : 0|8@1+ (1,-40) [-40|210] "°C" Vector__XXX
+ SG_ FuelTemp : 8|8@1+ (1,-40) [-40|210] "°C" Vector__XXX
+ SG_ EngineOilTemp1 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TurboOilTemp : 32|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ EngineIntercoolerTemp : 48|8@1+ (1,-40) [-40|210] "°C" Vector__XXX
+ SG_ IntercoolerThermostatOpening : 56|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+
+BO_ 2566824960 ET2_X_E: 8 EECU
+ SG_ EngineExhGasRecircDiffPressure : 32|16@1+ (0.0078125,-250) [-250|251.992] "kPa" Vector__XXX
+ SG_ EngineExhGasRecircTemp : 48|16@1+ (0.03125,-273) [-273|1734.97] "°C" Vector__XXX
+
+BO_ 2364539395 ETC1_X_T: 8 TECU
+ SG_ InputShaftSpeed : 40|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ ProgressiveShift : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MomEngOvSpeedEnbl : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PercentClutchSlip : 24|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+ SG_ OutputShaftSpeed : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ ShiftInProcess : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TorqConLupEngaged : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DrivelineEngaged : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SrcAddCtrlDevRetCtrl : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566831360 FD_X_E: 8 EECU
+ SG_ FanSpeed : 16|16@1+ (0.125,0) [0|8031.88] "RPM" Vector__XXX
+ SG_ FanDriveState : 8|4@1+ (1,0) [0|15] ""  VECU,TGW
+ SG_ EstPercentFanSpeed : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566719744 HRLFC_X_E: 8 Vector__XXX
+ SG_ HighResolutionEngineTripFuel : 0|32@1+ (0.001,0) [0|2013260000] "" Vector__XXX
+ SG_ HighResolutionEngineTotalFuelU : 32|32@1+ (0.001,0) [0|2013260000] "" Vector__XXX
+
+BO_ 2566719998 HRLFC: 8 Vector__XXX
+ SG_ HighResolutionEngineTripFuel : 0|32@1+ (0.001,0) [0|2013260000] "" Vector__XXX
+ SG_ HighResolutionEngineTotalFuelU : 32|32@1+ (0.001,0) [0|2013260000] "" Vector__XXX
+
+BO_ 2566832407 HRVD_IC: 8 IC
+ SG_ TotDistance : 0|32@1+ (0.005,0) [0|21055400] "km" Vector__XXX
+ SG_ TripDistance : 32|32@1+ (0.005,0) [0|21055400] "km" Vector__XXX
+
+BO_ 2566832384 HRVD_X_EECU: 8 EECU
+ SG_ TripDistance : 32|32@1+ (0.005,0) [0|21055400] "km" Vector__XXX
+ SG_ TotDistance : 0|32@1+ (0.005,0) [0|21055400] "km" Vector__XXX
+
+BO_ 2566845952 IC1_E: 8 EECU
+ SG_ EngineParticulateTrapInletPress : 0|8@1+ (0.5,0) [0|125] "kPa" Vector__XXX
+ SG_ EngineTurbochargerBoostPressure : 8|8@1+ (2,0) [0|500] "kPa" Vector__XXX
+ SG_ EngineIntakeManifold1Temperature : 16|8@1+ (1,-40) [-40|210] "°C" Vector__XXX
+ SG_ EngineAirInletPressure : 24|8@1+ (2,0) [0|500] "kPa" Vector__XXX
+ SG_ EngineAirFilter1DiffPressure : 32|8@1+ (0.05,0) [0|12.5] "kPa" Vector__XXX
+ SG_ EngineExhaustGasTemperature : 40|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ EngineCoolantFilterDiffPressure : 56|8@1+ (0.5,0) [0|125] "kPa" Vector__XXX
+
+BO_ 2566839296 IO_X_E: 8 EECU
+ SG_ EngTotIdleFuelUsed_BB1_X_E : 0|32@1+ (0.5,0) [0|2147483647.5] "L"  VECU,TGW,IC
+ SG_ EngTotIdleHours_BB1_X_E : 32|32@1+ (0.05,0) [0|214748364.75] "hour"  VECU,TGW,IC
+
+BO_ 2566842624 LFC_X_E: 8 EECU
+ SG_ EngineTotalFuelUsed : 32|32@1+ (0.5,0) [0|2105540000] "L"  ACM
+ SG_ EngineTripFuel : 0|32@1+ (0.5,0) [0|2105540000] "L"  ACM
+
+BO_ 2566844928 LFE_X_E: 8 EECU
+ SG_ EngineFuelRate : 0|16@1+ (0.05,0) [0|3212.75] "L/h" Vector__XXX
+ SG_ EngineInstantaneousFuelEconomy : 16|16@1+ (0.00195313,0) [0|125.498] "km/L" Vector__XXX
+
+BO_ 2565487872 REQ_ACM_E: 3 EECU
+ SG_ RequestedPGN : 0|24@1+ (1,0) [0|131071] ""  ACM
+
+BO_ 2565537539 REQ_X_T: 3 TECU
+ SG_ PGN_ID : 0|24@1+ (1,0) [0|16777200] "" Vector__XXX
+
+BO_ 2566847235 RetFluids_X_T: 8 TECU
+ SG_ RetOilTemp : 8|8@1+ (1,-40) [-40|210] "C" Vector__XXX
+ SG_ RetPressure : 0|8@1+ (0.16,0) [0|40] "bar" Vector__XXX
+
+BO_ 2566841344 ShtDwn_E: 8 EECU
+ SG_ EngineShutdownBySystem : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DriverAlertMode : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IdleShtDwnTimerOverride : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IdleShtDwnTimerFunc : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IdleSht2DwnTimerFunc : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AChighPressFanSW : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RefrigLowPressSW : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RefrigHighPressSW : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ WaitToStartLamp : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngProtSystHasShtdwnEng : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngProtSystApproachShtdwn : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngProtSystTimerOverride : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngProtSystTimerState : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EngProtSystConfig : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566841879 TD_X_DID: 8 IC
+ SG_ Seconds : 0|8@1+ (0.25,0) [0|59.75] "seconds" Vector__XXX
+ SG_ Minutes : 8|8@1+ (1,0) [0|59] "min" Vector__XXX
+ SG_ Hours : 16|8@1+ (1,0) [0|23] "h" Vector__XXX
+ SG_ Month : 24|8@1+ (1,0) [1|12] "month" Vector__XXX
+ SG_ Day : 32|8@1+ (0.25,0) [0|31.75] "day" Vector__XXX
+ SG_ Year : 40|8@1+ (1,1985) [0|250] "year" Vector__XXX
+ SG_ LocMinOffset : 48|8@1+ (1,-125) [-59|59] "min" Vector__XXX
+ SG_ LocHourOffset : 56|8@1+ (1,-125) [-23|23] "h" Vector__XXX
+
+BO_ 2632711997 TPDT_X_ACM: 8 ACM
+ SG_ SeqNumber : 0|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ Data1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data5 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data6 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data7 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565603095 TPDT_X_DID: 8 IC
+ SG_ SeqNumber : 0|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ Data1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data5 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data6 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data7 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565603072 TPDT_X_E: 8 EECU
+ SG_ SeqNumber : 0|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ Data1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data5 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data6 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data7 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565603087 TPDT_X_ER: 8 EngineRetarder
+ SG_ SeqNumber : 0|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ Data1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data5 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data6 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data7 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565603088 TPDT_X_R: 8 Retarder
+ SG_ SeqNumber : 0|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ Data1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data5 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data6 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data7 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565603149 TPDT_X_SWM: 8 SWM
+ SG_ SeqNumber : 0|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ Data1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data5 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data6 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data7 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2565603075 TPDT_X_T: 8 TECU
+ SG_ SeqNumber : 0|8@1+ (1,0) [1|255] "" Vector__XXX
+ SG_ Data1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data5 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data6 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Data7 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2348810251 TSC1_E_A: 8 EBS
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [0|125] "perc" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2348810243 TSC1_E_T: 8 TECU
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [0|125] "[perc]" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2348810257 TSC1_E_V: 8 Vector__XXX
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [0|125] "perc" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2348814091 TSC1_ER_A: 8 EBS
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2348814097 TSC1_ER_V: 8 Vector__XXX
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Undefined_1 : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Undefined_2 : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Undefined_3 : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2348814083 TSC1_ER_T: 8 TECU
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2348820747 TSC1_ExR_A: 8 EBS
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2348814347 TSC1_R_A: 8 EBS
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2348814339 TSC1_R_T: 8 TECU
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2348814353 TSC1_R_V: 8 Vector__XXX
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2348814122 TSC1_ER_ACC: 8 ACC
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+
+BO_ 2348814378 TSC1_R_ACC: 8 ACC
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [-125|0] "perc" Vector__XXX
+
+BO_ 2348810282 TSC1_E_ACC: 8 ACC
+ SG_ OverrideCtrlModes : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpeedCtrlCond : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OverCtrlModePrior : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ReqSpdSpdLmt : 8|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ ReqTorqTorqLmt : 24|8@1+ (1,-125) [0|125] "perc" Vector__XXX
+
+BO_ 2566846487 TRF1_IC: 8 IC
+ SG_ TransOilTemp : 32|16@1+ (0.03125,-273) [-50|200] "°C" Vector__XXX
+ SG_ TransOilPressure : 24|8@1+ (0.16,0) [0|40] "bar" Vector__XXX
+ SG_ ClutchPressure : 0|8@1+ (0.16,0) [0|40] "bar" Vector__XXX
+ SG_ TranFilterDiffPr : 16|8@1+ (0.02,0) [0|5] "bar" Vector__XXX
+ SG_ TransOilLevel : 8|8@1+ (0.4,0) [0|100] "perc" Vector__XXX
+
+BO_ 2566840320 VD_E: 8 EECU
+ SG_ TotDistance : 0|32@1+ (0.005,0) [0|21055400] "km" Vector__XXX
+ SG_ TripDistance : 32|32@1+ (0.005,0) [0|21055400] "km" Vector__XXX
+
+BO_ 2566846208 VEP_E: 8 EECU
+ SG_ NetBatteryCurrent : 0|8@1+ (1,-125) [-125|125] "A" Vector__XXX
+ SG_ AlternatorCurrent : 8|8@1+ (1,0) [0|250] "A" Vector__XXX
+ SG_ ChargingSystemPotential : 16|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ ElectricalPotential : 32|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ BatteryPotentialSwitched : 48|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+
+BO_ 2566848256 WIF_E: 8 EECU
+ SG_ WaterInFuelIndicator : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+
+
+CM_ "
+This database file modified by hand. Original Revison Date: 2015-05-15 14:47:20 per JEDoub";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "DBName" "";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DBName" "J1939";
+BA_ "NmStationAddress" BU_ EECU 0;
+BA_ "NmStationAddress" BU_ EBS 11;
+BA_ "NmStationAddress" BU_ TECU 3;
+BA_ "NmStationAddress" BU_ GECU 5;
+BA_ "NmStationAddress" BU_ Retarder 16;
+BA_ "NmStationAddress" BU_ EngineRetarder 15;
+BA_ "NmStationAddress" BU_ SWM 77;
+BA_ "NmStationAddress" BU_ ACC 42;
+BA_ "NmStationAddress" BU_ ACM 61;
+BA_ "NmStationAddress" BU_ IC 23;
+BA_ "NmStationAddress" BU_ VECU 17;
+BA_ "VFrameFormat" BO_ 2566732861 3;
+BA_ "VFrameFormat" BO_ 2565874493 3;
+BA_ "VFrameFormat" BO_ 2499624448 3;
+BA_ "VFrameFormat" BO_ 2566734141 3;
+BA_ "VFrameFormat" BO_ 2566774784 3;
+BA_ "VFrameFormat" BO_ 2566845696 3;
+BA_ "VFrameFormat" BO_ 2566753341 3;
+BA_ "VFrameFormat" BO_ 2565869117 3;
+BA_ "VFrameFormat" BO_ 2565869373 3;
+BA_ "VFrameFormat" BO_ 2566763520 3;
+BA_ "VFrameFormat" BO_ 2566763264 3;
+BA_ "VFrameFormat" BO_ 2566763069 3;
+BA_ "VFrameFormat" BO_ 2566804992 3;
+BA_ "VFrameFormat" BO_ 2565668669 3;
+BA_ "VFrameFormat" BO_ 2565668631 3;
+BA_ "VFrameFormat" BO_ 2565668608 3;
+BA_ "VFrameFormat" BO_ 2565668623 3;
+BA_ "VFrameFormat" BO_ 2565668624 3;
+BA_ "VFrameFormat" BO_ 2565668685 3;
+BA_ "VFrameFormat" BO_ 2566844672 3;
+BA_ "VFrameFormat" BO_ 2566757181 3;
+BA_ "VFrameFormat" BO_ 2566847511 3;
+BA_ "VFrameFormat" BO_ 2566834749 3;
+BA_ "VFrameFormat" BO_ 2566834699 3;
+BA_ "VFrameFormat" BO_ 2566834711 3;
+BA_ "VFrameFormat" BO_ 2566834688 3;
+BA_ "VFrameFormat" BO_ 2566749184 3;
+BA_ "VFrameFormat" BO_ 2565865777 3;
+BA_ "VFrameFormat" BO_ 2633949952 3;
+BA_ "VFrameFormat" BO_ 2364539904 3;
+BA_ "VFrameFormat" BO_ 2364539648 3;
+BA_ "VFrameFormat" BO_ 2566840064 3;
+BA_ "VFrameFormat" BO_ 2566844160 3;
+BA_ "VFrameFormat" BO_ 2566841600 3;
+BA_ "VFrameFormat" BO_ 2565865487 3;
+BA_ "VFrameFormat" BO_ 2566843904 3;
+BA_ "VFrameFormat" BO_ 2566824960 3;
+BA_ "VFrameFormat" BO_ 2364539395 3;
+BA_ "VFrameFormat" BO_ 2566831360 3;
+BA_ "VFrameFormat" BO_ 2566719744 3;
+BA_ "VFrameFormat" BO_ 2566719998 3;
+BA_ "VFrameFormat" BO_ 2566832407 3;
+BA_ "VFrameFormat" BO_ 2566832384 3;
+BA_ "VFrameFormat" BO_ 2566845952 3;
+BA_ "VFrameFormat" BO_ 2566839296 3;
+BA_ "VFrameFormat" BO_ 2566842624 3;
+BA_ "VFrameFormat" BO_ 2566844928 3;
+BA_ "VFrameFormat" BO_ 2565487872 3;
+BA_ "VFrameFormat" BO_ 2565537539 3;
+BA_ "VFrameFormat" BO_ 2566847235 3;
+BA_ "VFrameFormat" BO_ 2566841344 3;
+BA_ "VFrameFormat" BO_ 2566841879 3;
+BA_ "VFrameFormat" BO_ 2632711997 3;
+BA_ "VFrameFormat" BO_ 2565603095 3;
+BA_ "VFrameFormat" BO_ 2565603072 3;
+BA_ "VFrameFormat" BO_ 2565603087 3;
+BA_ "VFrameFormat" BO_ 2565603088 3;
+BA_ "VFrameFormat" BO_ 2565603149 3;
+BA_ "VFrameFormat" BO_ 2565603075 3;
+BA_ "VFrameFormat" BO_ 2348810251 3;
+BA_ "VFrameFormat" BO_ 2348810243 3;
+BA_ "VFrameFormat" BO_ 2348810257 3;
+BA_ "VFrameFormat" BO_ 2348814091 3;
+BA_ "VFrameFormat" BO_ 2348814097 3;
+BA_ "VFrameFormat" BO_ 2348814083 3;
+BA_ "VFrameFormat" BO_ 2348820747 3;
+BA_ "VFrameFormat" BO_ 2348814347 3;
+BA_ "VFrameFormat" BO_ 2348814339 3;
+BA_ "VFrameFormat" BO_ 2348814353 3;
+BA_ "VFrameFormat" BO_ 2348814122 3;
+BA_ "VFrameFormat" BO_ 2348814378 3;
+BA_ "VFrameFormat" BO_ 2348810282 3;
+BA_ "VFrameFormat" BO_ 2566846487 3;
+BA_ "VFrameFormat" BO_ 2566840320 3;
+BA_ "VFrameFormat" BO_ 2566846208 3;
+BA_ "VFrameFormat" BO_ 2566848256 3;
+
