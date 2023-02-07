@@ -770,10 +770,7 @@ namespace CANmonitor
                     {
                         int Node = 0xFF & CANmsgID;
 
-                        if (msgIDsInTPCM[Node] > 0)
-                        {
-                            msgIDsInTPCM[Node] = mpMessage.TPDTinfo(msgIDsInTPCM[Node], msg);
-                        }
+                        msgIDsInTPCM[Node] = mpMessage.TPDTinfo(msgIDsInTPCM[Node], msg);
                     }
                     #endregion
                 }
