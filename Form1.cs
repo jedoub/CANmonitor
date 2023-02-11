@@ -57,7 +57,7 @@ namespace CANmonitor
         private static bool pwtTPCM_E_active = false, CANrunningStat = false, assocDBCfile_S = false;
 
         public static byte[] VP26_Emsg = new byte[64];
-        public static byte[] DM1Etpmsg = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+        public static byte[] DM1Etpmsg = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
         public const int TPCM_E = 0x18ECFF00;
         public const int TPCM_A = 0x18ECFF3D;
@@ -71,6 +71,7 @@ namespace CANmonitor
         public const int DM1_E = 0x18FECA00;
         public const int DM1_A = 0x18FECA3D;
         public const int DM1_R = 0x18FECA10;
+        public const int DM1_T = 0x18FECA03;
         public const int DM2_R = 0x18FECB10;
         public const int EC1_E = 0x18FEE300;
         public const int RC_ER = 0x18FEE10F;
@@ -695,7 +696,8 @@ namespace CANmonitor
                     else if (((0x18FFFF00 & CANmsgID) >> 8) == 0x18EBFF)
                     {
                         int Node = 0xFF & CANmsgID;
-
+                        
+                        // Check before calling the TPDT Handle that the TPCM has been recv'd and is in the LIST
                         if (msgIDsInTPCM[Node] > 0)
                         {
                             msgIDsInTPCM[Node] = mpMessage.TPDTinfo(msgIDsInTPCM[Node], msg);
@@ -1179,12 +1181,18 @@ namespace CANmonitor
                         
                         if (CanMsgProc.msgIDs[el] == DM1_E && len > 8 )
                         {
+                            // When finished printing the data to the monitor
+                            if (msgByteCntr == len - 1)
+                                CanMsgProc.DM1tpServiced = true; // This flag assures the momentary DTCs, 2 DTCs or more, are shown on the screen
+                        }/*
+                        if (CanMsgProc.msgIDs[el] == DM1_T && len > 8)
+                        {
                             // Make a copy of the DATA here
                             if (msgByteCntr == len - 1)
                                 CanMsgProc.DM1tpServiced = true; // This flag assures the momentary DTCs, 2 DTCs or more, are shown on the screen
-                        }
+                        }*/
                     }
-                    
+
                     // For the REQ msg just Pad the text with phantom data bytes to keep the columns algined
                     if (msgByteCntr < 8)
                     {

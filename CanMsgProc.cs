@@ -132,11 +132,6 @@ namespace CANmonitor
 
                 msgDLCs[msgIDindx] = BAM[1];
                 msgData[msgIDindx] = new byte[BAM[1]];
-                if (extID == Form1.DM1_E)
-                {
-                    DM1tpServiced = false;
-                    Form1.DM1Etpmsg = new byte[BAM[1]];
-                }
                 msgTimeStamp_pv[msgIDindx] = msgTimeStamp[msgIDindx];
                 if (canTimer_status == Canlib.canStatus.canOK)
                 {
@@ -154,7 +149,9 @@ namespace CANmonitor
             int msgIDindx = 0;
 
             canTimer_status = Canlib.kvReadTimer64(CANsetupForm.CAN1hnd, out CurrentTime);
-                        
+            if (extID == 0x18FECA03)
+                extID = 0x18FECA03;
+
             // At This point the Multipacket message ID has been added and space reserved from the TPCMinfo into the RCV'D message List.
             // Find the msg in the LIST using a lambda search, then use the msg List index to associate & populate the data in the RCV'D msgList.
             msgIDindx = msgIDs.FindIndex(s => s == extID);
@@ -171,6 +168,7 @@ namespace CANmonitor
                     {
                         msgData[msgIDindx][(i - 1) + (data[0] - 1) * 7] = data[i];
 
+                        // I watch for EECU Transient DTCs as a special case. So I have a small duplicate buffer 
                         if (extID == Form1.DM1_E)
                             Form1.DM1Etpmsg[(i - 1) + (data[0] - 1) * 7] = data[i];
                     }
@@ -183,15 +181,12 @@ namespace CANmonitor
                     for (byte i = 1; i <= bytesLeft; i++)
                     {
                         msgData[msgIDindx][(i - 1) + (data[0] - 1) * 7] = data[i];
-
+                        
+                        // I watch for EECU Transient DTCs as a special case. So I have a small duplicate buffer 
                         if (extID == Form1.DM1_E)
                             Form1.DM1Etpmsg[(i - 1) + (data[0] - 1) * 7] = data[i];
                     }
                     TPDT_finished = 0;
-                    // Updated the Time in the RCV'D list
-                    //msgTimeStamp_pv[msgIDindx] = msgTimeStamp[msgIDindx];   // save the previous time
-                    //if (canTimer_status == Canlib.canStatus.canOK)
-                        //msgTimeStamp[msgIDindx] = CurrentTime - Form1.zeroTime;                        // update with the current time
                 }
             }
             return TPDT_finished;

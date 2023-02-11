@@ -403,6 +403,7 @@ namespace CANmonitor
 
             if (DMlen == 8)
             {
+                // There can only be 1 DTC since a second one requires 10 bytes.
                 if (DMmsg[0] > 0)
                 {
                     SPN = (((DMmsg[4] & 0xE0) >> 5) << 16) + (DMmsg[3] << 8) + DMmsg[2];
@@ -452,9 +453,12 @@ namespace CANmonitor
                     rtbx.Text += Environment.NewLine;
                 }
             }
+
+            // I watch for EECU Transient DTCs as a special case. So I have a small duplicate buffer that I read here
+            // after the transient DTC disappears.
             if (Form1.DM1Etpmsg[0] > 0 && DMlen == 8)
             {
-                rtbx.Text += Environment.NewLine + "Snapshot of all the DTCs when the intermittent DTC was active!" + Environment.NewLine;
+                rtbx.Text += Environment.NewLine + "Snapshot of all the EECU DTCs when there is an intermittent DTC!" + Environment.NewLine;
                 // The order in which the DTCs appear is not certain. Just print out all of them.
                 for (i = 2; i < Form1.DM1Etpmsg.Length;)
                 {
@@ -471,27 +475,26 @@ namespace CANmonitor
                             case 2:
                                 msbOfSPN = (Form1.DM1Etpmsg[i] & 0xE0) >> 5;
                                 SPN += msbOfSPN << 16;
-                                if (SPN < 524288)
+                                if (SPN > 0 && SPN < 524288)
                                 {
                                     FMI = (Form1.DM1Etpmsg[i] & 0x1F);
                                     rtbx.Text += srcAddr.ToString("D3") + "\t" + SPN.ToString("D6") + "  " + SPNstrings[SPN] + "  " + FMI.ToString("D3") + "  " + FMIs[FMI] + "  ";
                                 }
-                                else
-                                {
-                                    FMI = (Form1.DM1Etpmsg[i] & 0x1F);    // THIS else CODE ONLY RUNS WHEN SOMETHING IS WRONG. SAE Limits the SPN to 524288
-                                    rtbx.Text += srcAddr.ToString("D3") + "\t" + SPN.ToString("D6") + "  " + SPNstrings[520999] + "  " + FMI.ToString("D3") + "  " + FMIs[FMI] + "  ";
-                                }
-                                i++;
+                                i++;    // Increment here incase SPN == 0
                                 break;
                             case 3:
-                                OC = (Form1.DM1Etpmsg[i++] & 0x7F);
-                                rtbx.Text += OC.ToString("D3");
+                                if (SPN > 0 && SPN < 524288)
+                                {
+                                    OC = (Form1.DM1Etpmsg[i] & 0x7F);
+                                    rtbx.Text += OC.ToString("D3");
+                                }
+                                i++;    // Increment here incase SPN == 0
                                 break;
                         }
                     }
                     rtbx.Text += Environment.NewLine;
                 }
-                Form1.DM1Etpmsg[0] = 0;                
+                Form1.DM1Etpmsg[0] = 0;
             }
             return rtbx.Lines;
         }
